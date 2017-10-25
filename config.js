@@ -18,7 +18,8 @@ exports.config = {
     jasmine: 'spec/jasmine/*.js',
     pageObject: 'spec/pageObjectTest/*.js',
     dev: 'spec/pageObjectTest/flowTest.js',
-    zad1: 'spec/pageObjectTest/addToCartTest.js'
+    zad1: 'spec/pageObjectTest/addToCartTest.js',
+    zad2: 'spec/pageObjectTest/dressesProductsTest.js'
     },
     // Options to be passed to Jasmine-node.
     jasmineNodeOpts: {

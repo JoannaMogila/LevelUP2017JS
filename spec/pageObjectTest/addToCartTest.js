@@ -16,26 +16,19 @@ beforeAll(function () {
 })
 
 describe('Add to cart', function () {
-    it('Click Women overlap', function () {
+    it('Click Women overlap and check if Women Label has correct value', function () {
         homePage.womenOverlap.click();
-    })
-    it('Check if Women Label has correct value?', function () {
         expect(womenPage.womenLabel.getText()).toEqual('WOMEN ');
     })
-    it('Click Tops category', function () {
+    it('Click Tops category and check if Tops Label has correct value', function () {
         womenPage.topsCategory.click();
-    })
-    it('Check if Tops Label has correct value?', function () {
         expect(topsPage.topsLabel.getText()).toEqual('TOPS ');
     })
-    it('Click Faded Short Sleeve T-shirts', function () {
+    it('Click Faded Short Sleeve T-shirts and check if Faded Short Sleeve T-shirts Label has correct value', function () {
         topsPage.fadedShortSleeveLabel.click();
-    })
-    it('Check if Faded Short Sleeve T-shirts Label has correct value??', function () {
         expect(productPage.fadedShortSleeveLabel.getText()).toEqual('Faded Short Sleeve T-shirts');
     })
     it('Check if product description is longer than 8 chars?', function () {
-        productPage.isLabelLongerThan(8).then(console.log);
         expect(productPage.isLabelLongerThan(8)).toBeTruthy();
     })
     it('Check if condition value is new?', function () {
@@ -47,11 +40,9 @@ describe('Add to cart', function () {
     it('Click Add to cart button', function () {
         productPage.addToCartButton.click();
     })
-    it('Click cart label 2 times', function () {
+    it('Click cart label 2 times  and check if Faded Short Sleeve T-shirts Label is displayed', function () {
         productPage.cartLabel.click();
         productPage.cartLabel.click();
-    })
-    it('Check if Faded Short Sleeve T-shirts Label is displayed?', function () {
         expect(cartPage.productDescription.isDisplayed()).toBeTruthy();
     })
     it('Check if Faded Short Sleeve T-shirts Label has correct value?', function () {

@@ -18,8 +18,4 @@ ProductPage.prototype.isLabelLongerThan = function (isLongerThan) {
     });
 }
 
-
-
-
-
 module.exports=ProductPage;
