@@ -7,7 +7,7 @@ var contactUsPage=new ContactUsPage();
 describe('Protractor Demo App', function () {
     it('should have a title', function () {
 
-        browser.waitForAngularEnabled(false);
+      //  browser.waitForAngularEnabled(false);
         browser.get(homePage.URL);
         homePage.contactUsLink.click();
        // expect(homePage.cartLabel.getText())

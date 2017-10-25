@@ -17,7 +17,8 @@ exports.config = {
     suites: {
     jasmine: 'spec/jasmine/*.js',
     pageObject: 'spec/pageObjectTest/*.js',
-    dev: 'spec/pageObjectTest/flowTest.js'
+    dev: 'spec/pageObjectTest/flowTest.js',
+    zad1: 'spec/pageObjectTest/addToCartTest.js'
     },
     // Options to be passed to Jasmine-node.
     jasmineNodeOpts: {
@@ -26,7 +27,8 @@ exports.config = {
     onPrepare:function(){
         global.using=using;
         global.pageObjectDir=__dirname+"/pageObject";
-        global.ignoreSynchronization=true;
+        browser.ignoreSynchronization=true;
+        browser.driver.manage().window().maximize();
     },
 
 };
