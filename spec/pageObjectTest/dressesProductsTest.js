@@ -43,12 +43,9 @@ beforeAll(function () {
     browser.get(homePage.URL);
 })
 
-beforeEach(function(){  
-    homePage.dressesOverlap.click();
-})
-
 describe('Dresses Products test', function () {
     it('Check if Dresses Label has correct value', function () {
+        homePage.dressesOverlap.click();
         expect(dressesPage.dressesLabel.getText()).toEqual('DRESSES ');
     })
 
@@ -58,8 +55,9 @@ describe('Dresses Products test', function () {
             expect(productPage.productLabel.getText()).toEqual(dress.name); 
         })
         it('Click Dress label and check on the product page if price has correct value', function () { 
-            dressesPage[dress.nameSelector].click();
             expect(productPage.priceLabel.getText()).toEqual(dress.price); 
+            browser.navigate().back(); 
+            
         })
 
     })
