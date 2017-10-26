@@ -25,8 +25,8 @@ describe('Add to cart', function () {
         expect(topsPage.topsLabel.getText()).toEqual('TOPS ');
     })
     it('Click Faded Short Sleeve T-shirts and check if Faded Short Sleeve T-shirts Label has correct value', function () {
-        topsPage.fadedShortSleeveLabel.click();
-        expect(productPage.fadedShortSleeveLabel.getText()).toEqual('Faded Short Sleeve T-shirts');
+        topsPage.productLabel.click();
+        expect(productPage.productLabel.getText()).toEqual('Faded Short Sleeve T-shirts');
     })
     it('Check if product description is longer than 8 chars?', function () {
         expect(productPage.isLabelLongerThan(8)).toBeTruthy();
